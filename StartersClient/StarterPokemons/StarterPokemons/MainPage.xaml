@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StarterPokemons"
+             x:Class="StarterPokemons.MainPage">
+  <StackLayout Orientation="Vertical"  HorizontalOptions="Center" VerticalOptions="Center"  Padding="15,15,15,15" >
+    <Picker Title="Elige una region!" x:Name="RegionPicker" SelectedIndexChanged="OnRegionSelected"></Picker>
+    <ListView x:Name="starterList" BackgroundColor="#AAA">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Orientation="Vertical" Padding="15,5,0,0" >
+              <Image Source="{Binding image}" HorizontalOptions="CenterAndExpand"/>
+              <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="{Binding name}" FontSize="50" FontAttributes="Bold"  />
+                <Label Text="{Binding type}" FontAttributes="Italic"/>
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
