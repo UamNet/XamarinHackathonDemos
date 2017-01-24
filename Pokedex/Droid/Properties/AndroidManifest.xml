@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" package="Pokedex_Xamarin.Pokedex_Xamarin" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="20" android:targetSdkVersion="24" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+	<application android:label="Pokedex Xamarin">
+		<provider android:name="android.support.v4.content.FileProvider" android:authorities="Pokedex_Xamarin.Pokedex_Xamarin.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+		</provider>
+	</application>
+</manifest>

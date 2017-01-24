@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pokedexxamarin.PokedexDetailsPage">
+  <ScrollView>
+  <StackLayout Spacing="20" Padding="20" VerticalOptions="Center" Orientation="Vertical" HorizontalOptions="LayoutOptions.FillAndExpand">
+     <Image x:Name="picture"/>
+      <Label Text="Name"/>
+      <Entry x:Name="name"/>
+    <Label Text="Description"/>
+      <Entry x:Name="description"/>
+    <Label Text="Age"/>
+      <Entry x:Name="age"/>
+    <Label Text="Gender"/>
+      <Entry x:Name="gender"/>
+        <Label Text="Emotion"/>
+      <Entry x:Name="emotion"/>
+
+      <Button Text="Save" TextColor="White"
+             BackgroundColor="#77D065"
+             Clicked="OnSave"/>
+  </StackLayout>
+  </ScrollView>
+
+</ContentPage>
